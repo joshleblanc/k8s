@@ -9,6 +9,7 @@ spec:
   tls:
   - hosts:
     - famtime.grep.sh
+    - secret-santa-2.grep.sh
     secretName: letsencrypt-prod
   rules:
   - host: famtime.grep.sh
@@ -16,4 +17,10 @@ spec:
       paths:
       - backend:
           serviceName: famtime
+          servicePort: 80
+  - host: secret-santa-2.grep.sh
+    http:
+      paths:
+      - backend:
+          serviceName: secret-santa
           servicePort: 80
