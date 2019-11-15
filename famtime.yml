@@ -29,6 +29,7 @@ spec:
         image: horizonshadow/famtime
         ports:
         - containerPort: 8080
+        imagePullPolicy: Always
         env:
         - name: PORT
           value: "8080"
