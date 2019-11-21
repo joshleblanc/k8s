@@ -10,6 +10,7 @@ spec:
   - hosts:
     - famtime.grep.sh
     - secret-santa-2.grep.sh
+    - sc2overwatch.grep.sh
     secretName: letsencrypt-prod
   rules:
   - host: famtime.grep.sh
@@ -23,4 +24,10 @@ spec:
       paths:
       - backend:
           serviceName: secret-santa
+          servicePort: 80
+  - host: sc2overwatch.grep.sh
+    http:
+      paths:
+      - backend:
+          serviceName: sc2overwatch
           servicePort: 80

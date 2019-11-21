@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sc2overwatch
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: sc2overwatch
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sc2overwatch
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sc2overwatch
+  template:
+    metadata:
+      labels:
+        app: sc2overwatch
+    spec:
+      containers:
+      - name: sc2overwatch
+        image: horizonshadow/sc2overwatch
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: Always
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ROOT_URL
+          value: "https://sc2overwatch.grep.sh"
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: "sc2overwatch"
+              key: "DATABASE_URL"
+        - name: RAILS_ENV
+          value: "production"
+        - name: RAILS_MASTER_KEY
+          valueFrom:
+            secretKeyRef:
+              name: "sc2overwatch"
+              key: "RAILS_MASTER_KEY"
