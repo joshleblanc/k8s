@@ -47,3 +47,5 @@ spec:
             secretKeyRef:
               name: "sc2overwatch"
               key: "RAILS_MASTER_KEY"
+        - name: "RAILS_SERVE_STATIC_FILES"
+          value: "true"
