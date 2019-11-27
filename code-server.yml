@@ -11,7 +11,7 @@ metadata:
 spec:
         ports: 
         - port: 80
-          targetPort: 8443
+          targetPort: 8080
         selector:
                 app: code-server
 ---
@@ -37,7 +37,7 @@ spec:
                                   imagePullPolicy: Always
                                   name: code-server
                                   ports:
-                                          - containerPort: 8443
+                                          - containerPort: 8080
                                   env:
                                           - name: PASSWORD
                                             valueFrom:
