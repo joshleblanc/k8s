@@ -30,7 +30,7 @@ spec:
                                   imagePullPolicy: Always
                                   name: code-server
                                   volumeMounts:
-                                          - mountPath: /root/project 
+                                          - mountPath: /home/coder 
                                             name: code-server
                                   ports:
                                           - containerPort: 8080
@@ -40,6 +40,13 @@ spec:
                                                     secretKeyRef: 
                                                         name: code-server
                                                         key: password
+                        initContainers:
+                          - name: init-mount
+                            image: busybox
+                            command: ["/bin/chmod", "-R", "777", "/data"]
+                            volumeMounts:
+                              - name: code-server
+                                mountPath: /data
                         volumes:
                                 - name: code-server
                                   persistentVolumeClaim:
@@ -57,5 +64,3 @@ spec:
                         storage:
                                 5Gi
         storageClassName: do-block-storage
-
-
