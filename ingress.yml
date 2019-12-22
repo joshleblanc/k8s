@@ -8,7 +8,7 @@ metadata:
 spec:
   tls:
   - hosts:
-    - famtime.grep.sh
+    - famti.me
     - secret-santa-2.grep.sh
     - sc2overwatch.grep.sh
     - gnashblade.grep.sh
@@ -21,7 +21,7 @@ spec:
                     - backend:
                             serviceName: code-server
                             servicePort: 80
-  - host: famtime.grep.sh
+  - host: famti.me
     http:
       paths:
       - backend:

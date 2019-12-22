@@ -36,7 +36,7 @@ spec:
         - name: ROOT_URL
           value: "https://famtime.grep.sh"
         - name: MONGO_URL
-          value: "mongodb://mongo:27017/famtime"
+          value: "mongodb://mongo:27017/aa2gd-meteor"
         - name: "METEOR_SETTINGS"
           valueFrom: 
             secretKeyRef:
