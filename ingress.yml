@@ -13,6 +13,7 @@ spec:
     - sc2overwatch.grep.sh
     - gnashblade.grep.sh
     - code.grep.sh
+    - pgadmin.grep.sh
     secretName: letsencrypt-prod
   rules:
   - host: code.grep.sh
@@ -45,3 +46,9 @@ spec:
       - backend:
           serviceName: gnashblade
           servicePort: 80
+  - host: pgadmin.grep.sh
+    http:
+      paths:
+        - backend:
+            serviceName: pgadmin
+            servicePort: 80
