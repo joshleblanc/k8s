@@ -8,11 +8,12 @@ metadata:
 spec:
   tls:
   - hosts:
-    - famtime.grep.sh
-    - secret-santa-2.grep.sh
-    - sc2overwatch.com
+    - famti.me
+    - secret-santa.grep.sh
+    - sc2overwatch.sh
     - gnashblade.grep.sh
     - code.grep.sh
+    - pgadmin.grep.sh
     secretName: letsencrypt-prod
   rules:
   - host: code.grep.sh
@@ -21,13 +22,13 @@ spec:
                     - backend:
                             serviceName: code-server
                             servicePort: 80
-  - host: famtime.grep.sh
+  - host: famti.me
     http:
       paths:
       - backend:
           serviceName: famtime
           servicePort: 80
-  - host: secret-santa-2.grep.sh
+  - host: secret-santa.grep.sh
     http:
       paths:
       - backend:
@@ -45,3 +46,9 @@ spec:
       - backend:
           serviceName: gnashblade
           servicePort: 80
+  - host: pgadmin.grep.sh
+    http:
+      paths:
+        - backend:
+            serviceName: pgadmin
+            servicePort: 80

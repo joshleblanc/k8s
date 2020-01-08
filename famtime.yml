@@ -34,9 +34,9 @@ spec:
         - name: PORT
           value: "8080"
         - name: ROOT_URL
-          value: "https://famtime.grep.sh"
+          value: "https://famti.me"
         - name: MONGO_URL
-          value: "mongodb://mongo:27017/famtime"
+          value: "mongodb://mongo:27017/aa2gd-meteor"
         - name: "METEOR_SETTINGS"
           valueFrom: 
             secretKeyRef:

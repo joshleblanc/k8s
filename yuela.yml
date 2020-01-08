@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yuelabot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yuelabot
+  template:
+    metadata:
+      labels:
+        app: yuelabot
+    spec:
+      containers:
+      - name: yuelabot
+        image: horizonshadow/yuelabot
+        imagePullPolicy: Always
+        envFrom:
+        - secretRef:
+            name: yuelabot-secrets
