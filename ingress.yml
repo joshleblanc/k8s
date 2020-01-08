@@ -10,7 +10,7 @@ spec:
   - hosts:
     - famtime.grep.sh
     - secret-santa-2.grep.sh
-    - sc2overwatch.grep.sh
+    - sc2overwatch.com
     - gnashblade.grep.sh
     - code.grep.sh
     secretName: letsencrypt-prod
@@ -33,7 +33,7 @@ spec:
       - backend:
           serviceName: secret-santa
           servicePort: 80
-  - host: sc2overwatch.grep.sh
+  - host: sc2overwatch.com
     http:
       paths:
       - backend:

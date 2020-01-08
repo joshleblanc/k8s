@@ -41,6 +41,9 @@ spec:
         - name: postgres
           image: postgres:10.4
           imagePullPolicy: "IfNotPresent"
+          env:
+            - name: PGDATA
+              value: "/var/lib/postgresql/pgdata"
           ports:
             - containerPort: 5432
           envFrom:
