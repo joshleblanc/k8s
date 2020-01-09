@@ -10,19 +10,13 @@ spec:
   - hosts:
     - famti.me
     - secret-santa.grep.sh
-    - sc2overwatch.sh
+    - sc2overwatch.com
     - gnashblade.grep.sh
-    - code.grep.sh
     - pgadmin.grep.sh
     - juiceboxify.me
+    - allthingszerg.com
     secretName: letsencrypt-prod
   rules:
-  - host: code.grep.sh
-    http:
-            paths:
-                    - backend:
-                            serviceName: code-server
-                            servicePort: 80
   - host: famti.me
     http:
       paths:
@@ -58,4 +52,10 @@ spec:
       paths:
         - backend:
             serviceName: juiceboxify
+            servicePort: 80
+  - host: allthingszerg.com
+    http:
+      paths:
+        - backend:
+            serviceName: allthingszerg
             servicePort: 80

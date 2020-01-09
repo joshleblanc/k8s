@@ -35,3 +35,18 @@ spec:
         env:
         - name: RACK_ENV
           value: "production"
+        - name: azure_face_api_key
+          valueFrom:
+            secretKeyRef:
+              name: "juiceboxify-secrets"
+              key: "azure_face_api_key"
+        - name: aws_access_key_id
+          valueFrom:
+            secretKeyRef:
+              name: "juiceboxify-secrets"
+              key: "aws_access_key_id"
+        - name: aws_secret_access_key
+          valueFrom:
+            secretKeyRef:
+              name: "juiceboxify-secrets"
+              key: "aws_secret_access_key"
