@@ -14,6 +14,7 @@ spec:
     - gnashblade.grep.sh
     - code.grep.sh
     - pgadmin.grep.sh
+    - juiceboxify.me
     secretName: letsencrypt-prod
   rules:
   - host: code.grep.sh
@@ -51,4 +52,10 @@ spec:
       paths:
         - backend:
             serviceName: pgadmin
+            servicePort: 80
+  - host: juiceboxify.me
+    http:
+      paths:
+        - backend:
+            serviceName: juiceboxify
             servicePort: 80

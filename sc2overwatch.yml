@@ -24,9 +24,11 @@ spec:
       labels:
         app: sc2overwatch
     spec:
+      imagePullSecrets:
+      - name: registry
       containers:
       - name: sc2overwatch
-        image: horizonshadow/sc2overwatch
+        image: docker.pkg.github.com/joshleblanc/sc2overwatch/sc2overwatch
         ports:
         - containerPort: 8080
         imagePullPolicy: Always
