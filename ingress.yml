@@ -15,6 +15,7 @@ spec:
     - pgadmin.grep.sh
     - juiceboxify.me
     - allthingszerg.com
+    - wants.covertocoverbooks.ca
     secretName: letsencrypt-prod
   rules:
   - host: famti.me
@@ -58,4 +59,10 @@ spec:
       paths:
         - backend:
             serviceName: allthingszerg
+            servicePort: 80
+  - host: wants.covertocoverbooks.ca
+    http:
+      paths:
+        - backend:
+            serviceName: bookstore
             servicePort: 80
