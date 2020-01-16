@@ -15,6 +15,7 @@ spec:
     - pgadmin.grep.sh
     - juiceboxify.me
     - allthingszerg.com
+    - wants.covertocoverbooks.ca
     secretName: letsencrypt-prod
   rules:
   - host: famti.me
