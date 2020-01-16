@@ -59,3 +59,9 @@ spec:
         - backend:
             serviceName: allthingszerg
             servicePort: 80
+  - host: wants.covertocoverbooks.ca
+    http:
+      paths:
+        - backend:
+            serviceName: bookstore
+            servicePort: 80
