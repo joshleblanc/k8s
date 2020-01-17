@@ -39,3 +39,8 @@ spec:
           value: "https://gnashbla.de"
         - name: MONGO_URL
           value: "mongodb://mongo:27017/gnashblade"
+        - name: "METEOR_SETTINGS"
+          valueFrom: 
+            secretKeyRef:
+              name: "gnashblade-secrets"
+              key: "METEOR_SETTINGS"
