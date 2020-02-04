@@ -13,7 +13,6 @@ spec:
     - sc2overwatch.com
     - gnashblade.grep.sh
     - pgadmin.grep.sh
-    - juiceboxify.me
     - allthingszerg.com
     - wants.covertocoverbooks.ca
     - gnashbla.de
@@ -54,12 +53,6 @@ spec:
       paths:
         - backend:
             serviceName: pgadmin
-            servicePort: 80
-  - host: juiceboxify.me
-    http:
-      paths:
-        - backend:
-            serviceName: juiceboxify
             servicePort: 80
   - host: allthingszerg.com
     http:
