@@ -24,6 +24,8 @@ spec:
       labels:
         app: famtime
     spec:
+      imagePullSecrets:
+      - name: registry
       containers:
       - name: famtime
         image: docker.pkg.github.com/joshleblanc/aa2gd-meteor/famtime
