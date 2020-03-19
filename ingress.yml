@@ -16,6 +16,7 @@ spec:
     - allthingszerg.com
     - wants.covertocoverbooks.ca
     - gnashbla.de
+    - directus.grep.sh
     secretName: letsencrypt-prod
   rules:
   - host: famti.me
@@ -41,6 +42,12 @@ spec:
       paths:
       - backend:
           serviceName: gnashblade
+          servicePort: 80
+  - host: directus.grep.sh
+    http:
+      paths:
+      - backend:
+          serviceName: directus
           servicePort: 80
   - host: gnashbla.de
     http:
