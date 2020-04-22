@@ -10,26 +10,6 @@ spec:
   selector:
     app: juiceboxify
 ---
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: juiceboxify
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-spec:
-  tls:
-  - hosts:
-    - juiceboxify.me
-    secretName: letsencrypt-prod
-  rules:
-  - host: juiceboxify.me
-    http:
-      paths:
-      - backend:
-          serviceName: juiceboxify
-          servicePort: 80
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:

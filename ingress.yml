@@ -17,8 +17,15 @@ spec:
     - wants.covertocoverbooks.ca
     - gnashbla.de
     - directus.grep.sh
+    - juiceboxify.me
     secretName: letsencrypt-prod
   rules:
+  - host: juiceboxify.me
+    http:
+      paths:
+      - backend:
+          serviceName: juiceboxify
+          servicePort: 80
   - host: famti.me
     http:
       paths:
