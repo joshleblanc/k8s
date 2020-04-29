@@ -38,7 +38,10 @@ spec:
         - name: ROOT_URL
           value: "https://gnashbla.de"
         - name: MONGO_URL
-          value: "mongodb://mongo:27017/gnashblade"
+          valueFrom:
+            secretKeyRef:
+              name: "gnashblade-secrets"
+              key: "MONGO_URL"
         - name: "METEOR_SETTINGS"
           valueFrom: 
             secretKeyRef:
