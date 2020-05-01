@@ -42,6 +42,11 @@ spec:
             secretKeyRef:
               name: "gnashblade-secrets"
               key: "MONGO_URL"
+        - name: MONGO_OPLOG_URL
+          valueFrom:
+            secretKeyRef:
+              name: "gnashblade-secrets"
+              key: "MONGO_OPLOG_URL"
         - name: "METEOR_SETTINGS"
           valueFrom: 
             secretKeyRef:
