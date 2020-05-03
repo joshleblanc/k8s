@@ -42,8 +42,14 @@ spec:
         - name: mongo
           image: mongo
           command:
-            - mongod
-            - "--bind_ip_all"
+            - "sh"
+            - "-c"
+            - >
+              echo "storage:" >>  /etc/mongod.conf;
+              echo "    wiredTiger:" >>  /etc/mongod.conf;
+              echo "       engineConfig:" >>  /etc/mongod.conf;
+              echo "          cacheSizeGB: 1" >>  /etc/mongod.conf;
+              mongod --config /etc/mongod.conf --bind_ip_all
           ports:
             - containerPort: 27017
           volumeMounts:
