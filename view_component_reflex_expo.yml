@@ -36,7 +36,7 @@ spec:
         - name: PORT
           value: "8080"
         - name: ROOT_URL
-          value: "https://view_component_reflex_expo.grep.sh"
+          value: "https://view-component-reflex-expo.grep.sh"
         - name: DATABASE_URL
           valueFrom:
             secretKeyRef:
