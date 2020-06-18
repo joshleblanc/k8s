@@ -17,6 +17,7 @@ spec:
     - wants.covertocoverbooks.ca
     - gnashbla.de
     - juiceboxify.me
+    - view-component-reflex-expo.grep.sh
     secretName: letsencrypt-prod
   rules:
   - host: juiceboxify.me
@@ -42,6 +43,12 @@ spec:
       paths:
       - backend:
           serviceName: sc2overwatch
+          servicePort: 80
+  - host: view-component-reflex-expo.grep.sh
+    http:
+      paths:
+      - backend:
+          serviceName: view-component-reflex-expo
           servicePort: 80
   - host: gnashblade.grep.sh
     http:
