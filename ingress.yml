@@ -11,7 +11,6 @@ spec:
     - famti.me
     - secret-santa.grep.sh
     - sc2overwatch.com
-    - gnashblade.grep.sh
     - pgadmin.grep.sh
     - allthingszerg.com
     - wants.covertocoverbooks.ca
@@ -49,12 +48,6 @@ spec:
       paths:
       - backend:
           serviceName: view-component-reflex-expo
-          servicePort: 80
-  - host: gnashblade.grep.sh
-    http:
-      paths:
-      - backend:
-          serviceName: gnashblade
           servicePort: 80
   - host: gnashbla.de
     http:
