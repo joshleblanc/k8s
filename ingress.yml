@@ -10,13 +10,11 @@ spec:
   - hosts:
     - famti.me
     - secret-santa.grep.sh
-    - sc2overwatch.com
     - pgadmin.grep.sh
     - allthingszerg.com
     - wants.covertocoverbooks.ca
     - gnashbla.de
     - juiceboxify.me
-    - view-component-reflex-expo.grep.sh
     secretName: letsencrypt-prod
   rules:
   - host: juiceboxify.me
