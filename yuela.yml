@@ -27,7 +27,7 @@ spec:
       containers:
       - name: yuelabot
         ports:
-        - containerPort: 8080
+        - containerPort: 4567
         image: horizonshadow/yuelabot
         imagePullPolicy: Always
         envFrom:
