@@ -15,8 +15,15 @@ spec:
     - wants.covertocoverbooks.ca
     - gnashbla.de
     - juiceboxify.me
+    - yuela.moe
     secretName: letsencrypt-prod
   rules:
+  - host: yuela.moe
+    http:
+      paths:
+      - backend:
+          serviceName: yuelabot
+          servicePort: 80
   - host: juiceboxify.me
     http:
       paths:
