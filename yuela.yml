@@ -28,7 +28,7 @@ spec:
       - name: yuelabot
         ports:
         - containerPort: 4567
-        image: horizonshadow/yuelabot
+        image: docker.pkg.github.com/joshleblanc/yuelabot/bot:latest
         imagePullPolicy: Always
         envFrom:
         - secretRef:
