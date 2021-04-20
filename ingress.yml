@@ -15,15 +15,8 @@ spec:
     - wants.covertocoverbooks.ca
     - gnashbla.de
     - juiceboxify.me
-    - yuela.moe
     secretName: letsencrypt-prod
   rules:
-  - host: yuela.moe
-    http:
-      paths:
-      - backend:
-          serviceName: yuelabot
-          servicePort: 80
   - host: juiceboxify.me
     http:
       paths:
@@ -41,18 +34,6 @@ spec:
       paths:
       - backend:
           serviceName: secret-santa
-          servicePort: 80
-  - host: sc2overwatch.com
-    http:
-      paths:
-      - backend:
-          serviceName: sc2overwatch
-          servicePort: 80
-  - host: view-component-reflex-expo.grep.sh
-    http:
-      paths:
-      - backend:
-          serviceName: view-component-reflex-expo
           servicePort: 80
   - host: gnashbla.de
     http:
